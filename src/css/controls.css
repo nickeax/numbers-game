@@ -1,9 +1,12 @@
 .controls {
-  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   width: 50%;
-  padding: 3rem;
+  padding: 1rem;
   background-color: var(--mainColor);
-  margin: 5rem;
+  margin: 1rem;
 }
 
 .incDec {
@@ -14,7 +17,7 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: center;
   width: max-content;
   padding: 2rem;
@@ -26,25 +29,8 @@
   padding: 5px;
 }
 
-#smallNumbers::before,
-#largeNumbers::before {
-  font-size: 1.2rem;
-}
-
-#smallNumbers::before {
-  position: absolute;
-  display: inline-block;
-  top: 20px;
-  left: 75px;
-  content: 'SMALL';
-}
-
-#largeNumbers::before {
-  position: absolute;
-  display: inline-block;
-  top: 20px;
-  right: 75px;
-  content: 'LARGE';
+#smallsLargeReadout {
+  font-size: 2rem;
 }
 
 .spinnerUp,
@@ -86,11 +72,11 @@
 }
 
 #btnPlay {
-  padding: 2rem;
-  width: fit-content;
+  padding: 1rem;
+  width: 15rem;
+  text-align: center;
   color: var(--mainFontColor);
   font-size: 3rem;
-  /* background-color: rgba(65, 188, 253, 0.919); */
   border: 2px solid var(--mainFontColor);
   border-radius: 25%;
   transition: all 0.05s ease-in-out;
@@ -110,4 +96,102 @@
     rgba(255, 255, 255, 0.2)
   );
   box-shadow: 2px 2px 2px inset rgba(0, 0, 0, 0.8);
+}
+
+input[type='number'] {
+  /* font-family: 'sans-serif'; */
+  box-shadow: inset 2px 2px 2px #000, 2px 2px 2px aliceblue;
+  background-color: azure;
+  color: black;
+  width: 12rem;
+  padding: 5px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+input[type='number']::placeholder {
+  color: var(--mainColor);
+  text-shadow: none;
+}
+
+.alert {
+  color: firebrick;
+}
+
+@media only screen and (max-width: 280px) {
+  .controls {
+    padding: 1px;
+    margin: 10px;
+    width: 100%;
+    /* background-color: #333; */
+  }
+  .incDec {
+    padding: 1px;
+  }
+
+  .spinnerUp,
+  .spinnerDown {
+    padding: 1px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+
+  .incDec {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    width: max-content;
+    padding: 2px;
+    background-color: var(--mainColor);
+  }
+  #btnPlay {
+    padding: 10px;
+    width: fit-content;
+    color: var(--mainFontColor);
+    font-size: 1rem;
+    /* border: 2px solid var(--mainFontColor); */
+    border-radius: 5%;
+    transition: all 0.05s ease-in-out;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .controls {
+    padding: 1px;
+    margin: 10px;
+    width: 100%;
+    /* background-color: #333; */
+  }
+  .incDec {
+    padding: 1px;
+  }
+
+  .spinnerUp,
+  .spinnerDown {
+    padding: 1px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+
+  .incDec {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    width: max-content;
+    padding: 2px;
+    background-color: var(--mainColor);
+  }
+  #btnPlay {
+    padding: 10px;
+    width: fit-content;
+    color: var(--mainFontColor);
+    font-size: 1rem;
+    /* border: 2px solid var(--mainFontColor); */
+    border-radius: 5%;
+    transition: all 0.05s ease-in-out;
+  }
 }

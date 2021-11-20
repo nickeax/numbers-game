@@ -8,21 +8,46 @@
     <title>Just Numbers</title>
   </head>
   <body>
-    <header>Just Numbers</header>
+    <header>
+      <h5>Just Numbers</h5>
+      <span id="mobileTag">MOBILE!</span>
+      <tt
+        style="
+          font-size: 0.9rem;
+          color: rgba(0, 0, 0, 0.316);
+          text-shadow: none;
+          transform: translate(-30px, 15px) rotate(-280deg);
+          z-index: 666;
+        "
+      >
+        &copy; Nick Fletcher 2021
+      </tt>
+    </header>
     <div class="container">
       <div class="output" id="output">
-        OUTPUT
+        SET NUMBER OF SMALLS AND CLICK PLAY!
       </div>
       <div class="controls" id="controls">
-        <div class="incDec">
-          <div id="spinnerUp" class="spinnerUp"><i class="arrow up"></i></div>
-          <div id="smallNumbers" class="smalls"></div>
-          <div id="largeNumbers" class="smalls"></div>
+        <div id="smallsLargeReadout"></div>
+        <div id="btnPlay" class="controls">PLAY</div>
+        <input
+          id="timeLimit"
+          type="number"
+          min="10"
+          max="180"
+          placeholder="set time limit (secs)"
+        />
+        <div id="incDec" class="incDec">
+          <div id="spinnerUp" class="spinnerUp">
+            <i class="arrow up"></i>
+            MORE SMALLS
+          </div>
+
           <div id="spinnerDown" class="spinnerDown">
             <i class="arrow down"></i>
+            LESS SMALLS
           </div>
         </div>
-        <div id="btnPlay" class="control">PLAY</div>
       </div>
     </div>
   </body>
